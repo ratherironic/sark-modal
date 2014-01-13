@@ -1,0 +1,56 @@
+// _variables.scss
+//   Variables should be named general to specific
+
+
+// Breakpoints
+$breakpoint-s: 960px;
+$breakpoint-m: 1024px;
+$breakpoint-l: 1200px;
+
+
+// Media Queries
+//   should match enquire.js values
+$S: 'min-width:'+ $breakpoint-s;
+$M: 'min-width:'+ $breakpoint-m;
+$L: 'min-width:'+ $breakpoint-l;
+
+
+// Color Pallete
+$brand-yellow: #F9B341;
+$brand-pink:   #EC008C;
+
+$grey:       #888;
+$grey-dark:  #333;
+$grey-light: #888;
+
+$white: #FFF;
+$black: #000;
+
+
+// Color
+$color-text: $grey-dark;
+$color-link: $brand-pink;
+
+
+// Typography
+$vertical-rhythm-base: 16; // 16px default browser font size
+$vertical-rhythm: 24;      // 24px vertical rhythm
+
+$font-size-base: 1em; // Use browser default font-size, usually 16px
+
+// font sizes defined in _mixins.scss
+// $font-size-1
+// $font-size-2
+// $font-size-3
+// $font-size-4
+// $font-size-5
+// $font-size-6
+// $font-size-7
+
+
+// Spacing
+$space: ($vertical-rhythm / $vertical-rhythm-base) + 0em; // 24px to follow vertical rhythm
+
+
+// Extra
+$radius: $space /2;
