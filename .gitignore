@@ -10,3 +10,5 @@ npm-debug.log
 source/js/min
 source/css/min
 source/css/generated
+
+# Ignore all Grunt Tasks

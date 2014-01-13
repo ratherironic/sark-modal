@@ -25,8 +25,7 @@ module.exports = function(grunt) {
     imagemin:  require('./build/config/imagemin.js')(config),
     compass:   require('./build/config/compass.js')(config),
     cssmin:    require('./build/config/cssmin.js')(config),
-    jshint:    require('./build/config/jshint.js')(config),
-    requirejs: require('./build/config/requirejs.js')(config)
+    jshint:    require('./build/config/jshint.js')(config)
 
   });
 
@@ -38,7 +37,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-beep');
 
 
@@ -51,7 +49,6 @@ module.exports = function(grunt) {
                       'cssmin',          // minify concatenated css
                       'clean:concatcss', // delete the concatenated css directory/file
                       'jshint',          // run jshint to lint js
-                      'requirejs',       // run require to build and minify js
                       'beep:error'       // beep on Error
                     ]);
 
