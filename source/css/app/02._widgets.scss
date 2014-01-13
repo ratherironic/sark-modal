@@ -2,8 +2,65 @@
 
 @import "_modules/_variables.scss";
 @import "_modules/_mixins.scss";
+@import "compass/css3";
 
 
-/********************************************************** _widget_name_ */
+/********************************************************** _Modal_ */
 
 
+#mask {
+	background: #000;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+#mask,
+#modal,
+#modal-content,
+#close-modal {
+	transition: all 1s ease;
+
+	@include opacity(0);
+}
+
+#close-modal {
+	float: right;
+	z-index: 0;
+
+}
+
+#modal {
+	background: #fff;
+	border-radius: 25px;
+	color: #ec008c;
+	height: 400px;
+	left: 0;
+	margin: 0 auto;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	top: 200px;
+	width: 200px;
+	z-index: 0;
+}
+
+#modal-content {
+	z-index: 0;
+}
+
+#mask.sark-fade-in {
+	z-index: 4;
+
+	@include opacity(0.8);
+}
+
+#modal.sark-fade-in,
+#modal-content.sark-fade-in,
+#close-modal.sark-fade-in { 
+	z-index: 5;
+
+	@include opacity(1);
+}
