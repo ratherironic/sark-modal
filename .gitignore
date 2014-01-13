@@ -11,4 +11,7 @@ source/js/min
 source/css/min
 source/css/generated
 
-# Ignore all Grunt Tasks
+# Ignore all Grunt Task
+build/
+Gruntfile.js
+package.json
