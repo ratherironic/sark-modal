@@ -30,6 +30,7 @@
 			methods.setClickEvents();
 			methods.renderModal();
 			methods.addModalContent();
+			methods.setLeftPosition();
 			
 		},
 
@@ -85,8 +86,19 @@
 
 			$('#close-modal, #modal-content, #modal, #mask').removeClass('sark-'+methods.settings.animationType).remove();
 			
+		},
+
+		'setLeftPosition': function () {
+
+			var modalWidth = ( 100 * parseFloat($('#modal').css('width')) / parseFloat($(methods.settings.location).css('width')) ),
+				fullParentWidth = 100,
+				leftPercentage = (fullParentWidth - modalWidth) / 2;
+
+			$('#modal').css('left', leftPercentage + '%');
+
 		}
 	};
+
 	$.fn.sarkModal = function (options) {
 		
 		return methods.init.apply( this, arguments );
