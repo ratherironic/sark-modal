@@ -76,7 +76,9 @@
 
 		'showContent': function () {
 			
-			$('#close-modal, #modal-content, #modal, #mask').addClass('sark-'+methods.settings.animationType);
+			setTimeout(function () {
+				$('#close-modal, #modal-content, #modal, #mask').addClass('sark-'+methods.settings.animationType);
+			},200);
 
 		},
 
@@ -84,7 +86,11 @@
 
 			e.preventDefault();
 
-			$('#close-modal, #modal-content, #modal, #mask').removeClass('sark-'+methods.settings.animationType).remove();
+			$('#close-modal, #modal-content, #modal, #mask').removeClass('sark-'+methods.settings.animationType);
+
+			setTimeout(function () {
+				$('#close-modal, #modal-content, #modal, #mask').remove();
+			},1000);
 			
 		},
 
